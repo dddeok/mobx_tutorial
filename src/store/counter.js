@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 
 class CounterStore extends Component {
     number = 0;
-
+    @action
     increase = () => {
         this.number++;
     }

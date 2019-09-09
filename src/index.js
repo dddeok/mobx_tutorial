@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import CounterStore from './store/counter';
+
 import { Provider } from 'mobx-react';
+import CounterStore from './store/counter';
 
 const counter = new CounterStore();
 
 ReactDOM.render(
-    <Provider counter={counter}>
+    <Provider counter = {counter}>
         <App />
     </Provider>,
     document.getElementById('root')
