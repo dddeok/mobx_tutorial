@@ -4,8 +4,11 @@ import { observer } from 'mobx-react';
 
 export default class CounterStore{
 
-    @observable number = 0;
+    @observable number = 1;
 
+    constructor(root){
+        this.root = root
+    }
     @action increase = () =>{
         this.number++;
     }

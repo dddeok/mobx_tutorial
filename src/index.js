@@ -5,14 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'mobx-react';
-import CounterStore from './store/counter';
-import MarketStore from './store/market';
+import RootStore from './store/index';
 
-const counter = new CounterStore();
-const market = new MarketStore();
-
+const root = new RootStore();
 ReactDOM.render(
-    <Provider counter = {counter} market = {market}>
+    <Provider {...root}>
         <App />
     </Provider>,
     document.getElementById('root')
